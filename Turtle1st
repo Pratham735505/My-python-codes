@@ -1,0 +1,67 @@
+
+import turtle
+
+# Set up the Turtle screen
+screen = turtle.Screen()
+screen.bgcolor("red")
+
+# Set up the Turtle object
+krishna = turtle.Turtle()
+krishna.speed(10)  # Adjust the speed of drawing as needed
+
+# Set up the colors
+skin_color = "#FDD5B1"
+dress_color = "#FFCC00"
+hair_color = "#000000"
+
+krishna.penup()
+krishna.goto(0, -200)
+krishna.pendown()
+krishna.fillcolor(skin_color)
+krishna.begin_fill()
+krishna.circle(200)
+krishna.end_fill()
+
+
+krishna.penup()
+krishna.goto(-60, 40)
+krishna.pendown()
+krishna.fillcolor("white")
+krishna.begin_fill()
+krishna.circle(40)
+krishna.end_fill()
+
+krishna.penup()
+krishna.goto(-60, 60)
+krishna.pendown()
+krishna.fillcolor("black")
+krishna.begin_fill()
+krishna.circle(20)
+krishna.end_fill()
+
+krishna.penup()
+krishna.goto(60, 40)
+krishna.pendown()
+krishna.fillcolor("white")
+krishna.begin_fill()
+krishna.circle(40)
+krishna.end_fill()
+
+krishna.penup()
+krishna.goto(60, 60)
+krishna.pendown()
+krishna.fillcolor("black")
+krishna.begin_fill()
+krishna.circle(20)
+krishna.end_fill()
+
+
+krishna.penup()
+krishna.goto(-100, -50)
+krishna.pendown()
+krishna.color("brown")
+krishna.right(45)
+krishna.forward(150)
+
+krishna.left(90)
+krishna.forward(150)
