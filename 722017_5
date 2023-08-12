@@ -1,0 +1,15 @@
+
+l=0
+h=0
+
+for i in range(10):
+    L= int(input("Enter a number:"))
+    if h<L:
+        h=L
+    if i==0:
+        l=L
+    if l>L:
+        l=L
+print("Highest number is:",h)
+print("Lowest number is:",l)
+        

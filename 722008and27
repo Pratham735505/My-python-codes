@@ -1,0 +1,10 @@
+n = 0
+m = 1
+s= 0
+print(n)
+print(m)
+for i in range(18):
+    s = n+m
+    print(s)
+    n = m
+    m = s
