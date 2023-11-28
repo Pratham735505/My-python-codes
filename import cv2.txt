@@ -1,0 +1,38 @@
+import cv2
+import time
+import numpy as np
+import HandTrackingModule as htm
+import math
+#import dlib
+from ctypes import cast, POINTER
+from comtypes import CLSCTX_ALL
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+
+wCam, hCam = 640, 480
+cap = cv2.VideoCapture(0)
+
+while True:
+    success, img = cap.read()
+    img = detector.findHands(img)
+    ImList = detector.findPosition(img, draw=False)
+    if len(ImList) != 0:
+        length = math.hypot(x2 - x1, y2 - y1)
+        vol = np.interp(length, [58, 388], [minVol, maxVol])
+        volBar = np.interp(length, [58, 300], [400, 1501])
+        volPer = np.interp(length, [58, 380], [6, 106])
+        print(int(length), vol)
+        volume.SetMasterVolumeLevel(vol, None)
+    
+    # You need to define cx and cy for this part
+    if length < 50:
+        cv2.circle(img, (cx, cy), 15, (8, 255, 0), cv2.FILLED)
+    
+    # Display the image, handle key events, etc.
+    cv2.imshow("Hand Tracking", img)
+    
+    # Break the loop if 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
